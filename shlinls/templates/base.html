@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сокр.линк</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header class="container">
+        <span class="logo">Сокр<span class="tochka">.</span>линк</span>
+        <nav>
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'about' %}">Про нас</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}">Профиль</a>
+            <a href="{% url 'links' %}">Ссылки</a>
+            {% else %}
+            <a href="{% url 'user' %}">Войти</a>
+            <a href="{% url 'reg' %}">Регистрация</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+
+    <footer class="container">
+        <div>
+            <p>Все права защищены</p>
+        </div>
+        <div class="icon">
+            <i class="fa-brands fa-telegram fa-beat fa-xl"></i>
+            <i class="fa-brands fa-vk fa-beat fa-xl"></i>
+            <i class="fa-brands fa-youtube fa-beat fa-xl"></i>
+            <i class="fa-brands fa-square-twitter fa-beat fa-xl"></i>
+        </div>
+    </footer>
+<script src="https://kit.fontawesome.com/3f6116a9ad.js" crossorigin="anonymous"></script>
+</body>
+</html>

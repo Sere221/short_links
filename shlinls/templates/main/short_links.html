@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+  {% if user.is_authenticated %}
+    <div>
+        <form method="post" action="">
+            <h2>Создание ссылок</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn" type="submit">Отправить</button>
+        </form>
+    </div>
+<div class="maintxt">
+    <h1>Доступные ссылки</h1>
+  {% for el in links %}
+
+      <p>Cсылка - <a href="{{ el.link }}">/link/{{ el.slug }}</a></p>
+    </div>
+  {% endfor %}
+{% else %}
+    <div class="maintxt">
+        <h1>Вы не авторизованы</h1>
+        <p>Уже зарегистрированы? <a href="{% url 'user' %}">Войти в личный кабинет</a></p>
+    </div>
+{% endif %}
+{% endblock %}

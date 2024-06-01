@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main %}
+  <div class="form-section container">
+    <h2>Кабинет пользователя</h2>
+    <div class="maintxt">
+      <h1>@{{ user.username }}</h1>
+      <p>Email: {{ user.email }}</p>
+      <a href="{% url 'exit' %}"><button type="submit" class="btn">Выйти из кабинета</button></a>
+    </div>
+    <h2>Изменить данные про пользователя</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ update_user }}
+      <button type="submit" class="btn">Обновить данные</button>
+    </form>
+  </div>
+{% endblock %}

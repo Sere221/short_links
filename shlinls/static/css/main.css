@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: azure;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    transition: color 500ms ease;
+}
+
+a:hover, .tochka {
+    color: brown;
+}
+
+header.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+header .logo {
+    color: #222;
+    font-weight: 600;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+header nav a {
+    margin: 15px;
+}
+
+main {
+    min-height: 700px;
+}
+
+.maintxt{
+    text-align: center;
+    padding: 10px;
+}
+
+.maintxt > h1{
+    font-size: 45px;
+}
+
+.maintxt > p{
+    color: #444;
+}
+
+.maintxt > h1, .maintxt > p, .maintxt > button{
+    padding-bottom: 20px;
+}
+
+.btn{
+    background: brown;
+    border: none;
+    font-size: 15px;
+    color: aliceblue;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: transform 800ms ease;
+    margin: 20px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.maintxt > .desc{
+    text-align: justify;
+    padding-top: 20px;
+}
+
+.desc > p{
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    color: aliceblue;
+    background: #222;
+    padding: 25px;
+    height: calc(20vh - 80px);
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p, .icon > i{
+    padding-top: 20px;
+}
+
+.icon > i{
+    margin: 10px;
+}
+
+form {
+    margin: 30px 100px;
+    width: 600px;
+}
+
+form label {
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+form .helptext ul li, form .helptext, .errorlist{
+    list-style-type: none;
+    margin: 1px;
+    font-size: 13px;
+    display: block;
+    color: #444;
+}
+
+form input, form textarea, form select {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    width: 500px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.form-section>h2, .form-section>p {
+    text-align: center;
+}
